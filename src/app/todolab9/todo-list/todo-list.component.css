@@ -1,0 +1,25 @@
+.new_entry {
+    z-index: 100;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+}
+.entry {
+    margin: 5px 5px 5px 5px;
+}
+
+.delete_button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}

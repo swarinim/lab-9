@@ -1,0 +1,14 @@
+<mat-expansion-panel *ngIf="todo_list.length > 0">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        List of Todos
+      </mat-panel-title>
+      <mat-panel-description>
+        Click to Expand
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  
+    <mat-list>
+      <mat-list-item *ngFor="let entry of todo_list; let i = index"> {{ i }}. {{ entry.title }} </mat-list-item>
+    </mat-list>
+  </mat-expansion-panel>

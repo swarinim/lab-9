@@ -1,0 +1,18 @@
+<mat-card class="new_entry_form">
+    <mat-form-field appearance="outline">
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)] = "newtitle">
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Date</mat-label>
+      <input matInput [(ngModel)] = "newdate" type="date">
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <input matInput [(ngModel)] = "newdesc">
+    </mat-form-field>
+    <br />
+    <button mat-raised-button color="primary" (click)="add_todo()">ADD ENTRY</button>
+  </mat-card>

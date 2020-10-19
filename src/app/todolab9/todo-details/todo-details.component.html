@@ -1,0 +1,34 @@
+<table mat-table [dataSource]="table_data_source" class="mat-elevation-z8"
+*ngIf="table_data_source.data.length > 0">
+    <ng-container matColumnDef="ID">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let entry; let i = index;"> {{i}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef> Title </th>
+      <td mat-cell *matCellDef="let entry"> {{entry.title}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Date">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let entry"> {{entry.date}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let entry"> {{entry.desc}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Delete">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let entry; let i = index;">
+        <button class="delete_button" mat-icon-button color="warn" (click)="liService.remove(i)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="col_headers"></tr>
+    <tr mat-row *matRowDef="let row; columns: col_headers;"></tr>
+  </table>

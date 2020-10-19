@@ -1,0 +1,8 @@
+.new_entry_form {
+    margin-bottom: 20px;
+}
+
+.new_entry_form mat-form-field {
+    margin-right: 10px;
+    margin-left: 10px;
+}
